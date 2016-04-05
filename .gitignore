@@ -1,0 +1,12 @@
+src/to_frontend_sc/e2/rv5_images/**/*
+src/to_frontend_sc/e2/rv5_downloads/**/*
+build
+.DS_Store
+node_modules
+npm-debug.log
+json
+*.php
+.sass-cache
+sftpCache.json
+.ftppass
+
