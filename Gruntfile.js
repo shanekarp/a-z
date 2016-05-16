@@ -39,6 +39,36 @@ module.exports = function(grunt) {
                 }]
             }
         },
+        replace: {
+            cdn: {
+                src: ['src/**/*.html', 'src/_js/**/*.js', 'src/_scss/**/*.scss'],
+                overwrite: true,
+                replacements: [{
+                    from: 'http://localhost:8282/to_origin/',
+                    to: '/e2/'
+                }, {
+                    from: 'http://frontend.ardev.us/development/<%= pkg.name %>/to_origin/',
+                    to: '/e2/'
+                }, {
+                    from: 'http://frontend.ardev.us/api/',
+                    to: 'http://www.army.mil/api/'
+                }]
+            },
+            dev: {
+                src: ['src/**/*.html', 'src/_js/**/*.js', 'src/_scss/**/*.scss'],
+                overwrite: true,
+                replacements: [{
+                    from: /\/e2\/(?!rv5_js\/3rdparty|rv5_js\/main|rv5_js\/features|rv5_css\/features|rv5_images\/features)/g,
+                    to: 'http://frontend.ardev.us/development/<%= pkg.name %>/to_origin/'
+                }, {
+                    from: 'http://localhost:8282/to_origin/',
+                    to: 'http://frontend.ardev.us/development/<%= pkg.name %>/to_origin/'
+                }, {
+                    from: 'http://www.army.mil/api/',
+                    to: 'http://frontend.ardev.us/api/'
+                }]
+            }
+        }
     });
 
     grunt.loadNpmTasks('grunt-browserify');
@@ -47,6 +77,7 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('production', ['sass', 'browserify', 'uglify']);
+    grunt.registerTask('production', ['replace:cdn', 'sass','browserify', 'uglify']);
+
 
 };
