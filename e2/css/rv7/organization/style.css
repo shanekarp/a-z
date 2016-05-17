@@ -1,42 +1,56 @@
 /*
-Error: Invalid CSS after "...t 'grid-system'": expected "{", was ";"
-        on line 15 of _scss/style.scss
+Error: File to import not found or unreadable: globals/base/variables.
+       Load path: /Users/brettnolf/Documents/_development/a-z/_scss/globals
+        on line 5 of _scss/style.scss
 
+1: 
+2: 
+3: 
+4: 
+5: @import 'globals/base/variables';
+6: @import 'globals/base/mixins';
+7: @import 'globals/base/extends';
+8: @import 'globals/base/reset';
+9: @import 'globals/base/fonts';
 10: @import 'globals/base/images';
-11: ​
-12: // ----------------------------------------------------------------------
-13: // Layout
-14: // ----------------------------------------------------------------------
-15: @import 'grid-system';
-16: @import 'grid';
-17: ​
-18: // ----------------------------------------------------------------------
-19: // globals/modules
-20: // ----------------------------------------------------------------------
 
 Backtrace:
-_scss/style.scss:15
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1163:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1099:in `expected'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1094:in `tok!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:641:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:635:in `ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:660:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:653:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:117:in `stylesheet'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:42:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/engine.rb:393:in `_to_tree'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/engine.rb:368:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/engine.rb:285:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/exec/sass_scss.rb:375:in `run'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/exec/sass_scss.rb:62:in `process_result'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/exec/base.rb:40:in `parse'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/exec/base.rb:19:in `parse!'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/bin/sass:13:in `<top (required)>'
-/usr/bin/sass:23:in `load'
-/usr/bin/sass:23:in `<main>'
+_scss/style.scss:5
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:45:in `import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:311:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:412:in `run'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/base.rb:52:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/exec/base.rb:19:in `parse!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/bin/sass:13:in `<top (required)>'
+/usr/local/bin/sass:23:in `load'
+/usr/local/bin/sass:23:in `<main>'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...t 'grid-system'\": expected \"{\", was \";\"\A         on line 15 of _scss/style.scss\A \A 10: @import 'globals/base/images';\A 11: ​\A 12: // ----------------------------------------------------------------------\A 13: // Layout\A 14: // ----------------------------------------------------------------------\A 15: @import 'grid-system';\A 16: @import 'grid';\A 17: ​\A 18: // ----------------------------------------------------------------------\A 19: // globals/modules\A 20: // ----------------------------------------------------------------------"; }
+  content: "Error: File to import not found or unreadable: globals/base/variables.\A        Load path: /Users/brettnolf/Documents/_development/a-z/_scss/globals\A         on line 5 of _scss/style.scss\A \A 1: \A 2: \A 3: \A 4: \A 5: @import 'globals/base/variables';\A 6: @import 'globals/base/mixins';\A 7: @import 'globals/base/extends';\A 8: @import 'globals/base/reset';\A 9: @import 'globals/base/fonts';\A 10: @import 'globals/base/images';"; }
