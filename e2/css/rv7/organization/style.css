@@ -1,21 +1,21 @@
 /*
-Error: Invalid CSS after "...t 'grid-system'": expected "{", was ";"
-        on line 15 of _scss/style.scss
+Error: Invalid CSS after "...odules/buttons'": expected "{", was ";"
+        on line 21 of _scss/style.scss
 
-10: @import 'globals/base/images';
-11: ​
-12: // ----------------------------------------------------------------------
-13: // Layout
-14: // ----------------------------------------------------------------------
-15: @import 'grid-system';
-16: @import 'grid';
+16: // @import 'grid';
 17: ​
 18: // ----------------------------------------------------------------------
 19: // globals/modules
 20: // ----------------------------------------------------------------------
+21: @import 'globals/modules/buttons';
+22: @import 'globals/modules/header';
+23: @import 'globals/modules/sub-header';
+24: @import 'globals/modules/social';
+25: @import 'globals/modules/footer';
+26: @import 'globals/modules/home/menu';
 
 Backtrace:
-_scss/style.scss:15
+_scss/style.scss:21
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1163:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1099:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.4/lib/sass/scss/parser.rb:1094:in `tok!'
@@ -39,4 +39,4 @@ _scss/style.scss:15
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...t 'grid-system'\": expected \"{\", was \";\"\A         on line 15 of _scss/style.scss\A \A 10: @import 'globals/base/images';\A 11: ​\A 12: // ----------------------------------------------------------------------\A 13: // Layout\A 14: // ----------------------------------------------------------------------\A 15: @import 'grid-system';\A 16: @import 'grid';\A 17: ​\A 18: // ----------------------------------------------------------------------\A 19: // globals/modules\A 20: // ----------------------------------------------------------------------"; }
+  content: "Error: Invalid CSS after \"...odules/buttons'\": expected \"{\", was \";\"\A         on line 21 of _scss/style.scss\A \A 16: // @import 'grid';\A 17: ​\A 18: // ----------------------------------------------------------------------\A 19: // globals/modules\A 20: // ----------------------------------------------------------------------\A 21: @import 'globals/modules/buttons';\A 22: @import 'globals/modules/header';\A 23: @import 'globals/modules/sub-header';\A 24: @import 'globals/modules/social';\A 25: @import 'globals/modules/footer';\A 26: @import 'globals/modules/home/menu';"; }
