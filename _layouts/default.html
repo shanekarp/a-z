@@ -4,15 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/e2/css/rv7/organization/style.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="/e2/css/rv7/organization/a-z/style.css" type="text/css" media="screen">
 </head>
-<body>
-    {% include globals/header.blade.php %}
+<body id="{{ page.active }}" class="{{ page.id }}" >
+	<a class="hidden top" name="top">top</a>
+    {% include globals/modules/header.blade.php %}
         
     {{ content }}
     
-    {% include globals/social.blade.php %}
-    {% include globals/footer.blade.php %}
+    {% include globals/modules/social.blade.php %}
+    {% include globals/modules/footer.blade.php %}
     {% include scripts.html %}
 </body>
 </html>

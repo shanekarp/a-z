@@ -1,8 +1,13 @@
 
 
-*,
-*:after,
-*:before {
+$container: 1020px;
+$container-md: 740px;
+$container-sm: 670px;
+
+// need this!
+// include everything under main since border box messes up the header a bit :P
+.main *
+{
   @include box-sizing(border-box);
 }
 
@@ -32,6 +37,7 @@
   // 480 - 699
   @include breakpoints(nav mobile) {
     margin: 50px auto;
+//    max-width: 446px;
   }
   
   // 480 - 768

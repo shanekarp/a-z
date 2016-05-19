@@ -1,4 +1,15 @@
 module.exports = function(grunt) {
+    var configs = '_js/globals/configs/production.js',
+        i = 0,
+        len = grunt.cli.tasks.length;
+
+    //SET GLOBAL CONFIGS BASED ON ENVIROMENT OR TASK
+    for (i; i < len; i++) {
+        if (grunt.cli.tasks[i] === 'dev') {
+            configs = '_js/globals/configs/development.js';
+        }
+    }
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -9,17 +20,28 @@ module.exports = function(grunt) {
                     loadPath: '_scss/globals/'
                 },
                 files: {
-                    'e2/css/rv7/organization/style.css': '_scss/style.scss'
+                    'e2/css/rv7/organization/a-z/style.css': '_scss/style.scss'
                 }
             }
         },
         browserify: {
-            dist: {
+            libs: {
                 files: {
-                    './e2/scripts/rv7/organization/<%= pkg.name %>.js': ['_js/globals/header.js']
+                    '_js/bundled/header.js': '_js/globals/header.js'
                 },
                 options: {
                     transform: ['babelify']
+                }
+            },
+            az: {
+                files: {
+                    '_js/bundled/a-z.js': [configs, '_js/a-z.js']
+                },
+                options: {
+                    transform: ['babelify'],
+                    alias: [
+                        './_js/globals/modules/Helper.js:Helper'
+                    ]
                 }
             }
         },
@@ -33,7 +55,8 @@ module.exports = function(grunt) {
             build: {
                 files: [{
                     src: [
-                        'e2/scripts/rv7/organization/<%= pkg.name %>.js'
+                        '_js/bundled/header.js',
+                        '_js/bundled/a-z.js'
                     ],
                     dest: 'e2/scripts/rv7/organization/<%= pkg.name %>.min.js'
                 }]

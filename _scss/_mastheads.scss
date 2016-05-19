@@ -1,0 +1,28 @@
+.a-z-intro *,
+.a-z-intro *:after,
+.a-z-intro *:before {
+  @include box-sizing(border-box);
+}
+
+.a-z-intro {
+  background: $secondary-background-color;
+  overflow: hidden;
+  
+  .container {
+    h1 {
+      color: map-get($army-branding, gold);
+      font: 700 2.25em $font-family;
+      text-transform: uppercase;
+    }
+  }
+  
+  @include breakpoints(mobile) {
+    .container {
+      text-align: center;
+      
+      h1 { font: 700 1.75em $font-family; }
+    }
+  }
+}
+
+

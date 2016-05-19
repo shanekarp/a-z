@@ -1,9 +1,13 @@
+
+
+
+
 // Number of columns in the grid.
 $grid-columns: 12 !default;
-​
+
 // Padding between columns. Gets divided in half for the left and right.
 $grid-gutter-width: 30px !default;
-​
+
 // Centered container element
 @mixin container-fixed($gutter: $grid-gutter-width) {
   margin-left: auto;
@@ -12,7 +16,7 @@ $grid-gutter-width: 30px !default;
   padding-right: ceil(($gutter / 2));
   @include clearfix();
 }
-​
+
 // Creates a wrapper for a series of columns
 @mixin row($inside: false, $gutter: $grid-gutter-width) {
   @if($inside == true) {
@@ -29,7 +33,7 @@ $grid-gutter-width: 30px !default;
   
   @include clearfix();
 }
-​
+
 @mixin span($columns, $gutter: $grid-gutter-width)
 {
   float: left;
@@ -37,25 +41,30 @@ $grid-gutter-width: 30px !default;
   padding-right: ($gutter / 2);
   width: percentage(($columns / $grid-columns));
 }
-​
+
 @mixin offset($columns)
 {
   margin-left: percentage(($columns / $grid-columns));
 }
-​
+
 // creates a class with row(true) from above
 .row {
   @include row(true);
 }
-​
+
 // creates a class with container-fixed() from above
 .container-fixed {
   @include container-fixed();
 }
-​
+
 // creates classes named .span1 through .span12
 // same as doing @include span(1);
 @for $i from 1 through $grid-columns {
   .span#{$i} { @include span($i); }
 }
-​
+
+
+
+
+
+
