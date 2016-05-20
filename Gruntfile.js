@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                     loadPath: '_scss/globals/'
                 },
                 files: {
-                    'e2/css/rv7/organization/a-z/style.css': '_scss/style.scss'
+                    'e2/css/rv7/a-z/style.css': '_scss/style.scss'
                 }
             }
         },
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
                         '_js/bundled/header.js',
                         '_js/bundled/a-z.js'
                     ],
-                    dest: 'e2/scripts/rv7/organization/<%= pkg.name %>.min.js'
+                    dest: 'e2/js/rv7/a-z/<%= pkg.name %>.min.js'
                 }]
             }
         },
@@ -100,6 +100,8 @@ module.exports = function(grunt) {
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
 
-    grunt.registerTask('production', ['replace:cdn', 'sass','browserify', 'uglify']);
+    grunt.loadNpmTasks('grunt-text-replace');
+
+    grunt.registerTask('production', ['replace:cdn', 'sass', 'browserify', 'uglify']);
 
 };

@@ -1,24 +1,30 @@
 require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
-var Helper = require('./globals/modules/Helper'),
-    bodyElem = document.getElementsByTagName('body')[0],
-    docElem = document.documentElement;
-function showTopBtn(scrolledAmt) {
-    var topBtn = document.getElementsByClassName('to-top')[0];
+/*global window, document, Showdown, require*/
 
-    if (scrolledAmt >= 750) {
-        Helper.addClass(topBtn, 'visible');
-    } else {
-        Helper.removeClass(topBtn, 'visible');
+var Helper = require('Helper');
+
+(function () {
+    var bodyElem = document.getElementsByTagName('body')[0],
+        docElem = document.documentElement;
+
+    function showTopBtn(scrolledAmt) {
+        var topBtn = document.getElementsByClassName('to-top')[0];
+
+        if (scrolledAmt >= 750) {
+            Helper.addClass(topBtn, 'visible');
+        } else {
+            Helper.removeClass(topBtn, 'visible');
+        }
     }
-}
 
-window.onscroll = function () {
-    showTopBtn(bodyElem.scrollTop || docElem.scrollTop);
-};
+    window.onscroll = function () {
+        showTopBtn(bodyElem.scrollTop || docElem.scrollTop);
+    };
+})();
 
-},{"./globals/modules/Helper":"Helper"}],2:[function(require,module,exports){
+},{"Helper":"Helper"}],2:[function(require,module,exports){
 'use strict';
 
 /*jshint -W032 */ /* ignore unnecessary semicolon */
@@ -61,6 +67,11 @@ var Helper = function () {
                 var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
                 el.className = el.className.replace(reg, ' ');
             }
+        }
+    }, {
+        key: 'toggleClass',
+        value: function toggleClass(el, className) {
+            if (this.hasClass(el, className)) this.removeClass(el, className);else this.addClass(el, className);
         }
     }]);
 
