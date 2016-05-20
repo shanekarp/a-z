@@ -1,348 +1,192 @@
-
-
-@import 'defaults';
+@import "defaults";
 
 .container {
-  // a { @include link-underline(); }
-  
-  h4 {
-  	font: 700 1.5em $font-family;
-  	margin: 0 0 54px;
-  	text-transform: uppercase;
-
-  	&::after {
-  		background: map-get($army-branding, gold);
-  		content: '';
-  		display: block;
-  		height: 5px;
-  		margin: 20px 0 0;
-  		width: 60px;
-  	}
+  a {
+    @include link-underline;
   }
-  
-  @include breakpoints(tablet nav mobile) {
-  	h4 {
-  		font: 700 1.3em $font-family;
-  		margin: 0 0 40px;
-  		text-align: center;
 
-  		&:after {
-  			margin: 10px auto 0;
-  		}
-  	}
+  h4 {
+    font: 700 1.5em $font-family;
+    margin: 0 0 54px;
+    text-transform: uppercase;
+
+    &::after {
+      background: map-get($army-branding, gold);
+      content: '';
+      display: block;
+      height: 5px;
+      margin: 20px 0 0;
+      width: 60px;
+    }
+  }
+
+  @include breakpoints(tablet nav mobile) {
+    h4 {
+      font: 700 1.3em $font-family;
+      margin: 0 0 40px;
+      text-align: center;
+
+      &:after {
+        margin: 10px auto 0;
+      }
+    }
   }
 }
 
 #azmenu a {
-	background-color: #EBEBEB;
-	color: #3D3D3D;
-	font-size: 1.2em;
-	padding: 7px 12px;
-	margin: 3px;
-	display: inline-block;
+  background-color: #EBEBEB;
+  color: #3D3D3D;
+  font-size: 1.2em;
+  padding: 7px 12px;
+  margin: 3px;
+  display: inline-block;
 }
+
 #azmenu a:hover {
-	text-decoration: underline
+  text-decoration: underline;
 }
-	// #aztitle {
-	// 	clear: both
-	// }
 
-	.a-z {
-    // .container {
-    // 	margin: auto auto;
-    // }
+.a-z {
+  h4 {
+    margin: 60px 0 54px;
+
+    &.first {
+      margin: 0 0 54px;
+    }
+
+    a:focus,
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include breakpoints(lg_tablet sm_desktop desktop large really_big) {
     h4 {
-    	margin: 60px 0 54px;
+      a {
+        overflow: hidden;
+        position: relative;
 
-    	&.first { margin: 0 0 54px; }
+        &:after {
+          content: '#';
+          position: inherit;
+          right: -40px;
 
-    	a:focus,
-    	a:hover { text-decoration:none; }
+          @include opacity(0);
+
+          @include custom-transition(right 0.25s ease, opacity 0.25s ease);
+        }
+
+        &:hover {
+          &:after {
+            right: -10px;
+
+            @include opacity(1);
+          }
+        }
+      }
+    }
+  }
+
+
+  ul {
+    @include row(true);
+
+    li {
+      @include span(12);
+
+      a.ankor:focus,
+      a.ankor:hover {
+        text-decoration: none;
+      }
+
+      ol {
+        list-style: decimal;
+        overflow: hidden;
+
+        li ul {
+          list-style: outside;
+          overflow: hidden;
+        }
+      }
+
+      ul {
+        list-style: outside;
+        overflow: hidden;
+      }
+    }
+  }
+
+  #azcontent {
+    padding-bottom: 3em a {
+      font-size: 12px;
+      font-weight: normal;
+      line-height: 1.4em;
+    };
+
+    h2 {
+      position: relative;
+      margin-bottom: 45px;
+      margin-top: 45px;
+      padding: 3em 0 2em a {
+        font-size: 1.4em;
+        font-weight: bold;
+      };
+
+      &::after {
+        background: map-get($army-branding, gold);
+        content: '';
+        display: block;
+        height: 5px;
+        margin: 15px 0 0;
+        width: 60px;
+      }
     }
 
-    @include breakpoints(lg_tablet sm_desktop desktop large really_big) {
-    	h4 {
-    		a {
-    			overflow: hidden;
-    			position: relative;
-
-    			&:after {
-    				content: '#';
-    				position: inherit;
-    				right: -40px;
-
-    				@include opacity(0);
-    				@include custom-transition(right .25s ease, opacity .25s ease);
-    			}
-
-    			&:hover {
-    				&:after {
-    					right: -10px;
-    					@include opacity(1);
-    				}
-    			}
-    		}
-    	}
+    h3 {
+      padding: 1em 0;
+      font-size: 14px;
+      font-weight: bold a;
     }
+  }
 
-    ul {
-    	@include row(true);
+  a.jump-link {
+    height: 0;
+    position: absolute;
+    text-indent: -10000px;
+    top: -100px;
+    width: 0;
+  }
 
-    	li {
-    		@include span(12);
-
-    		a.ankor:focus,
-    		a.ankor:hover { text-decoration: none; }
-
-    		ol {
-    			list-style: decimal;
-    			overflow: hidden;
-
-    			li ul {
-    				list-style: outside;
-    				overflow: hidden;
-    			}
-    		}
-
-    		ul {
-    			list-style: outside;
-    			overflow: hidden;
-    		}
-    	}
-    }
-
-    #azcontent {
-    	padding-bottom: 3em
-    	a {
-    		font-size: 12px;
-    		font-weight: normal;
-    		line-height: 1.4em
-    	}
-    	h2 {
-    		position: relative;
-    		margin-bottom: 45px;
-    		margin-top: 45px;
-    		padding: 3em 0 2em
-    		a {
-    			font-size: 1.4em;
-    			font-weight: bold
-    		}
-    		&::after {
-    			background: map-get($army-branding, gold);
-    			content: '';
-    			display: block;
-    			height: 5px;
-    			margin: 15px 0 0;
-    			width: 60px;
-    		}
-    	}
-    	h3 {
-    		padding: 1em 0;
-    		font-size: 14px;
-    		font-weight: bold
-    		a {
-
-    		}
-    	}
-    	ul, li {
-    		list-style: none
-    	}
-    }
-
-// 	#dropDownNav li ul li a:focus,#dropDownNav li ul li a:hover {
-// 		background-image: none;
-// 		background-color: #C4C4C4
-// 	}
-
-
-// 	#footerMiddle {
-// 		margin: 1.6em auto 0.4em;
-// 		width: 720px
-// 	}
-// 	#footerRight {
-// 		float: right;
-// 		text-align: right
-// 	}
-
-// 	#leftColNav .level4 a:hover {
-// 		background: none;
-// 		color: #3d3d3d
-// 	}
-// 	#leftColNav li a.current:hover {
-// 		background: #4e4e4e;
-// 		color: #fff
-// 	}
-// 	#leftColNav li a.subNav:hover {
-// 		background: #f7f7f7;
-// 		color: #3d3d3d
-// 	}
-// 	#leftColNav li a:hover {
-// 		background-color: #b4b4b4;
-// 		color: #3d3d3d
-// 	}
-// 	#mainContent {
-// 		background: #f7f7f7;
-// 		float: left;
-// 		padding-bottom: 15px;
-// 		width: 800px
-// 	}
-
-// 	#mainContent #left {
-// 		width: 458px
-// 	}
-// 	#mainContent #right {
-// 		width: 312px
-// 	}
-// 	#mediaList {
-// 		display: inline;
-// 		float: left
-// 	}
-
-// 	#MiniHeader:hover {
-// 		background-position: 0 -30px
-// 	}
-// 	#rsstext li {
-// 		font-size: 1.1em
-// 	}
-// 	#socialMedia {
-// 		position: relative;
-// 		width: 196px
-// 	}
-// 	#socialMedia .prev {
-// 		left: 0px;
-// 		top: 1em
-// 	}
-// 	#socialMedia .next {
-// 		right: 0px;
-// 		top: 1em
-// 	}
-// 	#soldiersMag p {
-// 		line-height: 1em;
-// 		margin: 0
-// 	}
-// 	#spotlight p {
-// 		color: #fff;
-// 		line-height: 1.2em
-// 	}
-// 	.right {
-// 		text-align: right
-// 	}
-// 	.rss,.podcasts,.standto {
-// 		display: block;
-// 		height: 19px;
-// 		line-height: 19px;
-// 		margin: 0.4em 0
-// 	}
-// 	#images .prev {
-// 		float: left
-// 	}
-// 	#images .next {
-// 		float: right
-// 	}
-// 	@media print {body {
-// 		background: #fff
-// 	}
-// 	#header,#navBar,#breadCrumbs,#leftCol,#rightCol,#footer {
-// 		display: none
-// 	}
-// 	#mainContent {
-// 		overflow: visible
-// 	}
-
-// }
-// #mainContent {
-// 	width: 100%
-// }
-// #aztitle {
-// 	clear: both
-// }
-// #aztitle h1 {
-// 	margin-left: 120px;
-// 	margin-top: 20px
-// }
-
-// #azmenu {
-// 	float: left;
-// 	padding: 15px 0 0 30px;
-// 	width: auto
-// }
-// #azmenu a {
-// 	background: #ebebeb;
-// 	color: #3d3d3d;
-// 	float: left;
-// 	font-size: 1.2em;
-// 	line-height: 1.2em;
-// 	margin: 3px
-// }
-// #azmenu a:hover {
-// 	text-decoration: underline
-// }
-// .az {
-// 	position: absolute;
-// 	left: -10000px;
-// 	top: auto;
-// 	width: 1px;
-// 	height: 1px;
-// 	overflow: hidden
-// }
-// #iframeContent {
-// 	background: transparent
-// }
-// .grayBg input:focus {
-// 	border: 2px solid #7b8738
-// }
-// #addMediaContainer h3 {
-// 	margin-top: 0.3em
-// }
-// #librarySearch {
-// 	margin-top: 0.8em
-// }
-// #contentSelectWrapper {
-// 	padding: 0.8em 0 0.3em 12px
-// }
-// .contentList {
-// 	float: left
-// }
-// .contentList {
-// 	padding: 0 0 0 12px
-// }
-// .contentList li {
-// 	color: #3d3d3d;
-// 	margin: 0.4em 8px 0.4em 0;
-// 	position: relative
-// }
-// .contentList li img {
-// 	border: none;
-// 	margin-top: 1px
-// }
-// .contentList li .deleteItem:hover {
-// 	background-position: -251px -20px
-// }
-// #libraryPag h4 {
-// 	border: 1px solid #b4b4b4;
-// 	font-style: normal;
-// 	height: 15px;
-// 	line-height: 15px;
-// 	margin: 0;
-// 	padding: 0 8px
-// }
-// #libraryPag a {
-// 	height: 17px;
-// 	width: 17px
-// }
-	a.jump-link {
-	    height: 0;
-	    position: absolute;
-	    text-indent: -10000px;
-	    top: -100px;
-	    width: 0;
-	}
-	h2:first-child {
-       margin: 0 0 54px;
-    }
+  h2:first-child {
+    margin: 0 0 54px;
+  }
 }
-.top { top: 0; }
+
+#azcontent {
+  ul {
+    @include row(true);
+
+    font-size: .8em;
+    list-style: outside;
+    padding-left: 30px;
+
+    li {
+      @include span(12);
+
+      a {
+        display: inline-block;
+        font: 400 1.25em / 1.375em $font-family;
+        padding: 0 0 15px 0;
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+}
+
+.top {
+  top: 0;
+}
 
 .to-top {
   background: map-get($army-branding, grey40);
@@ -351,22 +195,27 @@
   height: 50px;
   position: fixed;
   right: -100%;
-  
+
   @include opacity(0);
-  @include custom-transition(opacity .25s ease);
-  
+
+  @include custom-transition(opacity 0.25s ease);
+
   &.visible {
-    @include opacity(.7);
+    @include opacity(0.7);
+
     right: 30px;
   }
-  
+
   @include breakpoints(lg_tablet sm_desktop desktop large really_big) {
-    &:hover.visible { @include opacity(1); }
+    &:hover.visible {
+      @include opacity(1);
+    }
   }
-  
+
+
   a {
     padding: 20px;
-    
+
     span {
       background: transparent $social-button-sprite no-repeat scroll -180px -59px;
       display: inline-block;
@@ -376,6 +225,3 @@
     }
   }
 }
-
-
-
