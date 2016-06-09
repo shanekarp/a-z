@@ -24,15 +24,7 @@ var Helper = require('Helper');
     };
 })();
 
-},{"Helper":"Helper"}],2:[function(require,module,exports){
-'use strict';
-
-/*jshint -W032 */ /* ignore unnecessary semicolon */
-var Configs = window.Configs || {};
-Configs.API_DOMAIN = 'https://www.army.mil';
-window.Configs = Configs;
-
-},{}],"Helper":[function(require,module,exports){
+},{"Helper":"Helper"}],"Helper":[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -83,4 +75,4 @@ var Helper = function () {
 exports.default = Helper;
 module.exports = exports['default'];
 
-},{}]},{},[2,1]);
+},{}]},{},[1]);
