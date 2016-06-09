@@ -1,38 +1,5 @@
 @import "defaults";
 
-.container {
-  a {
-    @include link-underline;
-  }
-
-  h4 {
-    font: 700 1.5em $font-family;
-    margin: 0 0 54px;
-    text-transform: uppercase;
-
-    &::after {
-      background: map-get($army-branding, gold);
-      content: '';
-      display: block;
-      height: 5px;
-      margin: 20px 0 0;
-      width: 60px;
-    }
-  }
-
-  @include breakpoints(tablet nav mobile) {
-    h4 {
-      font: 700 1.3em $font-family;
-      margin: 0 0 40px;
-      text-align: center;
-
-      &:after {
-        margin: 10px auto 0;
-      }
-    }
-  }
-}
-
 #azmenu a {
   background-color: #EBEBEB;
   color: #3D3D3D;
@@ -44,6 +11,10 @@
 
 #azmenu a:hover {
   text-decoration: underline;
+}
+
+.az-menu {
+  margin-bottom: 0;
 }
 
 .a-z {
