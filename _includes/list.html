@@ -1,0 +1,16 @@
+{% if list.size > 0 %}
+
+<h4>
+    <a class="jump-link" name="{{ id }}">{{ name }}</a>
+    <a href="#{{ id }}">{{ name }}</a>
+</h4>
+
+<div class="links-list">
+    <ul class="link-column-full">
+    {% for link in list %}
+        <li><a href="{{ link.href }}">{{ link.title }}</a></li>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endif %}

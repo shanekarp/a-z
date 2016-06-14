@@ -1,110 +1,25 @@
-@import "defaults";
 
-#azmenu a {
-  background-color: #EBEBEB;
-  color: #3D3D3D;
-  font-size: 1.2em;
-  padding: 7px 12px;
-  margin: 3px;
-  display: inline-block;
-}
 
-#azmenu a:hover {
-  text-decoration: underline;
-}
 
 .az-menu {
   margin-bottom: 0;
+  
+  a {
+    background-color: #EBEBEB;
+    color: #3D3D3D;
+    display: inline-block;
+    font-size: 1.2em;
+    margin: 3px;
+    padding: 2px 12px;
+  }
 }
 
 .a-z {
   h4 {
-    margin: 60px 0 54px;
-
-    &.first {
-      margin: 0 0 54px;
-    }
+    position: relative;
 
     a:focus,
-    a:hover {
-      text-decoration: none;
-    }
-  }
-
-  @include breakpoints(lg_tablet sm_desktop desktop large really_big) {
-    h4 {
-      a {
-        overflow: hidden;
-        position: relative;
-
-        &:after {
-          content: '#';
-          position: inherit;
-          right: -40px;
-
-          @include opacity(0);
-
-          @include custom-transition(right 0.25s ease, opacity 0.25s ease);
-        }
-
-        &:hover {
-          &:after {
-            right: -10px;
-
-            @include opacity(1);
-          }
-        }
-      }
-    }
-  }
-
-
-  ul {
-    @include row(true);
-
-    li {
-      @include span(12);
-
-      a.ankor:focus,
-      a.ankor:hover {
-        text-decoration: none;
-      }
-
-      ol {
-        list-style: decimal;
-        overflow: hidden;
-
-        li ul {
-          list-style: outside;
-          overflow: hidden;
-        }
-      }
-
-      ul {
-        list-style: outside;
-        overflow: hidden;
-      }
-    }
-  }
-
-  #azcontent {
-    padding-bottom: 3em a {
-      font-size: 12px;
-      font-weight: normal;
-      line-height: 1.4em;
-    };
-
-    h2 {
-      position: relative;
-      margin-bottom: 45px;
-      margin-top: 45px;
-    }
-
-    h3 {
-      padding: 1em 0;
-      font-size: 14px;
-      font-weight: bold a;
-    }
+    a:hover { text-decoration: none; }
   }
 
   a.jump-link {
@@ -114,37 +29,11 @@
     top: -100px;
     width: 0;
   }
-
-  h2:first-child {
-    margin: 0 0 54px;
-  }
-}
-
-#azcontent {
-  ul {
-    @include row(true);
-
-    font-size: .8em;
-    list-style: outside;
-    padding-left: 30px;
-
-    li {
-      @include span(12);
-
-      a {
-        display: inline-block;
-        font: 400 1.25em / 1.375em $font-family;
-        padding: 0 0 15px 0;
-        position: relative;
-        top: 2px;
-        vertical-align: top;
-      }
-    }
-  }
 }
 
 .top {
-  top: 0;
+  position: absolute;
+  top: -68px;
 }
 
 .to-top {
@@ -154,6 +43,7 @@
   height: 50px;
   position: fixed;
   right: -100%;
+  z-index: 2;
 
   @include opacity(0);
 

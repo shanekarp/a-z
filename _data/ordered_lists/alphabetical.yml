@@ -1,4 +1,4 @@
-A: 
+A:
   - title: A. P. Hill, Va.
     href: http://www.aphill.army.mil/
   - title: Aberdeen Proving Ground (APG), Md.
@@ -267,13 +267,7 @@ A:
     href: http://www.rucker.army.mil/usaace/command.html
   - title: Aviation Logistics School, Fort Eustis, Va. (USAALS)
     href: http://www.usaals.army.mil/
-B: 
-  - title: A. P. Hill, Va.
-    href: http://www.aphill.army.mil/
-  - title: Aberdeen Proving Ground (APG), Md.
-    href: http://www.apg.army.mil/
-  - title: Aberdeen Test Center
-    href: http://www.atc.army.mil/
+B:
   - title: Base Realignment and Closure (BRAC)
     href: http://www.dod.mil/brac/
   - title: Battle Command Battle Laboratory - Fort Gordon, Ga. (BCBL)
@@ -676,7 +670,7 @@ F:
     href: http://www.armyg1.army.mil/foia/default.asp
   - title: Freedom of Information Act Electronic Reading Room
     href: https://www.rmda.army.mil/foia/FOIA_ReadingRoom/err-main.aspx
-G: 
+G:
   - title: G-1 - Office of the Deputy Chief of Staff for Personnel (ODCSPER)
     href: http://www.armyg1.army.mil/
   - title: G-2 - Office of the Deputy Chief of Staff for Intelligence (ODCSINT)
@@ -1612,7 +1606,7 @@ V:
     href: http://vaguard.dodlive.mil/
   - title: Voting Assistance Program
     href: https://www.hrc.army.mil/site/Active/TAGD/pssd/psb/votingindex.htm
-W: 
+W:
   - title: Walter Reed Army Institute of Research (WRAIR)
     href: http://www.wrair.army.mil
   - title: Walter Reed Army Institute of Research,Human Subjects Protection Branch (HSPB)
@@ -1667,8 +1661,10 @@ W:
     href: http://www.wyoguard.com/
   - title: White House Communications Agency (WHCA)
     href: http://www.disa.mil/about/offices/whca.html 
-Y: 
+X:
+Y:
   - title: Yakima Training Center, Wash.
     href: http://www.lewis-mcchord.army.mil/yakima/
   - title: Yuma Proving Ground, Ariz.
     href: http://www.yuma.army.mil/
+Z:
