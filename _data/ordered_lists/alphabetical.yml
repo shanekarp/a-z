@@ -551,10 +551,6 @@ E:
     href: http://www.eucom.mil/
   - title: Evans Army Hospital, Fort Carson, Colo.
     href: http://evans.amedd.army.mil/
-  - title: Europe Regional Dental Command
-    href: http://www.erdc.amedd.army.mil/
-  - title: Europe Regional Medical Command
-    href: http://ermc.amedd.army.mil/
   - title: Eighth U.S. Army Noncommissioned Officer Academy
     href: http://8tharmy.korea.army.mil/NCOA/
   - title: U.S. Army Electronic Proving Ground
@@ -1198,6 +1194,8 @@ R:
     href: http://www.army.mil/rhcAtlantic
   - title: Regional Health Command - Central
     href: http://www.army.mil/rhccentral
+  - title: Regional Health Command - Europe
+    href: http://rhce.amedd.army.mil/
   - title: Regional Health Command - Pacific
     href: http://www.army.mil/rhcpacific
   - title: Regulations, Army Wide
@@ -1520,7 +1518,7 @@ U:
   - title: U.S. Army Space and Missile Defense Command (SMDC)
     href: http://www.army.mil/info/organization/unitsandcommands/commandstructure/smdc/
   - title: U.S. Army Special Operations Command (USASOC)
-    href: http://www.soc.mil
+    href: https://www.army.mil/usasoc
   - title: U.S. Army Symbols and History
     href: http://www.army.mil/symbols/
   - title: U.S. Army TACOM LCMC Cost & Systems Analysis
